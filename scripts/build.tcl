@@ -145,10 +145,13 @@ if {[llength $wrapper_files] > 0} {
 # Restaurar waveform, si existe
 # ============================================================
 
-set wcfg_file [file join $repo_dir "simulation" "sim_CPU_behav.wcfg"]
+set wcfg_file [file normalize [file join $repo_dir "simulation" "sim_CPU_behav.wcfg"]]
 
 if {[file exists $wcfg_file]} {
-    add_files -fileset sim_1 $wcfg_file
+    puts "Adding waveform config: $wcfg_file"
+    add_files -fileset sim_1 [list $wcfg_file]
+} else {
+    puts "Waveform config not found: $wcfg_file"
 }
 
 # ============================================================
