@@ -161,6 +161,6 @@ if {[file exists $wcfg_file]} {
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 
-save_project
+save_project_as basic_CPU_rebuilt
 
 puts "Proyecto reconstruido correctamente."
