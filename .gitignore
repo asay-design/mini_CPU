@@ -1,0 +1,36 @@
+# ============================================================
+# Ignorar absolutamente todo
+# ============================================================
+*
+
+# Permitir navegar por directorios
+!*/
+
+# ============================================================
+# Permitir SOLO carpetas del repo limpio
+# ============================================================
+
+!memory/
+!hdl/
+!bd/
+!constraints/
+!ips/
+!simulation/
+!scripts/
+
+# Permitir contenido dentro de esas carpetas
+!memory/**
+!hdl/**
+!bd/**
+!constraints/**
+!ips/**
+!simulation/**
+!scripts/**
+
+# ============================================================
+# Permitir archivos raíz importantes
+# ============================================================
+
+!.gitignore
+!README.md
+!LICENSE
